@@ -24,7 +24,7 @@ a{font-family:"Poppins";color:#04052E;font-size:24px}
 </head>
 <body>
 <script>
-let probs=["","Child labor stops children from doing and receiving necessities such as education and proper nutrition and care. This greatly affects their quality of life and their future.","When children grow up being uneducated, it usually means they find it very hard to get a well-paying job, and traps them in a loop of poverty.","Not being aware of the services means if they are in a problem, even if the government can help them with ease, it may not help because the child never reached out to them.","Even if children are going to school, not being able to speak the local language will greatly affect their confidence. They also may not be able to communicate with people who help what may be going on at home.","Psychological issues can completely change how the child thinks and behaves, making some people treat them differently and make them feel left out.","Isolation only worsens the effects of everything above. They stop sharing their thoughts and problems with family and feel like they have no one to talk to.","Like isolation, discrimination will only worsen the issues and make it even less likely the child will make friends. It will also greatly reduce the child’s confidence and make them feel all the more isolated"]
+let probs=["","Child labor stops children from doing and receiving necessities such as education and proper nutrition and care. This greatly affects their quality of life and their future. 19% of boys aged 12-14 and a whopping 48% of boys aged 15-17 are forced to work. Girls, however are much lower (5 and 9%).","When children grow up being uneducated, it usually means they find it very hard to get a well-paying job, and traps them in a loop of poverty. Only 48.57% of upper-secondary-age refugee/protected children attended upper secondary school.","Not being aware of the services means if they are in a problem, even if the government can help them with ease, it may not help because the child never reached out to them.","Even if children are going to school, not being able to speak the local language will greatly affect their confidence. They also may not be able to communicate with people who help what may be going on at home.","Psychological issues can completely change how the child thinks and behaves, making some people treat them differently and make them feel left out. Nearly 1 in 4 Syrian refugee children aged 8–17 in an Istanbul study showed symptoms of depression, anxiety or PTSD.","Isolation only worsens the effects of everything above. They stop sharing their thoughts and problems with family and feel like they have no one to talk to. 65% of Syrian refugee children in one Turkish study had high scores on a loneliness scale.","Like isolation, discrimination will only worsen the issues and make it even less likely the child will make friends. 44.1% of Syrian refugee adolescents reported experiencing bullying, compared with 27.8% of non-refugee adolescents. It will also greatly reduce the child’s confidence and make them feel all the more isolated"]
 let solus=["","Despite being a huge problem for adolescent immigrants in Türkiye, a relatively simple and reliable solution is to make laws against child labor extremely strict. For example, extremely big fines, random inspections, or even losing their selling license. Implementing these stricter laws would strongly discourage businesses from using child labor due to the immense consequences.","Lack of education is a major problem, trapping new immigrants in a loop of poverty. To prevent this, education could be made a mandate for all new immigrants of ages 3-18. This would hold both the school system and parents accountable for a child not receiving education, making it much more likely every child will be educated.","A major problem with a simple solution; campaigns and posters put up in refugee areas, and simply putting up billboard posters will make migrants aware of some solutions to problems they may be facing. Adding multilingual posters will further boost its efficiency.","Not knowing the language can greatly amplify the effects of all the problems. A way to reduce its effects is to teach Turkish in schools and teach basic Turkish upon entering.","Many adolescents face psychological issues upon migrating due to trauma in their previous home. To fix this, counselors can be put in school. These counselors could be multilingual, and speak the child’s native language to avoid the language barrier. They should also be specialized in trauma training, or PTSD, to give the right help at the right time.","To avoid isolation and discrimination, migrant families could be put in areas with a diverse group of people, or more families that have migrated from their area to make them feel included, or at home.","  To avoid isolation and discrimination, migrant families could be put in areas with a diverse group of people, or more families that have migrated from their area to make them feel included, or at home."]
 function solu(n, button){document.getElementById(n).innerHTML=solus[n];button.innerHTML="Problem";button.setAttribute("onclick",`prob(${n},this)`)}
 function prob(n, button){document.getElementById(n).innerHTML=probs[n];button.innerHTML="Solution";button.setAttribute("onclick",`solu(${n},this)`)}
@@ -44,13 +44,13 @@ function bck(button){document.getElementById("sc").innerHTML="";button.innerHTML
 </div>
 <div class="card c1">
 <h2>1. Child Labor <div class="la"><button onclick="solu(1, this)">Solution</button></div></h2>
-<p id="1">Child labor stops children from doing and receiving necessities such as education and proper nutrition and care. This greatly affects their quality of life and their future.</p>
+<p id="1">Child labor stops children from doing and receiving necessities such as education and proper nutrition and care. This greatly affects their quality of life and their future. 19% of boys aged 12-14 and a whopping 48% of boys aged 15-17 are forced to work. Girls, however are much lower (5 and 9%).</p>
 </div>
 </div>
 <div class="cardrow">
 <div class="card c1">
 <h2>2. Lack of education <div class="la"><button onclick="solu(2, this)">Solution</button></div></h2>
-<p id="2">When children grow up being uneducated, it usually means they find it very hard to get a well-paying job, and traps them in a loop of poverty.</p>
+<p id="2">When children grow up being uneducated, it usually means they find it very hard to get a well-paying job, and traps them in a loop of poverty. Only 48.57% of upper-secondary-age refugee/protected children attended upper secondary school.</p>
 </div>
 <div class="card c1">
 <h2>3. Unawareness of available services <div class="la"><button onclick="solu(3, this)">Solution</button></div></h2>
@@ -64,17 +64,17 @@ function bck(button){document.getElementById("sc").innerHTML="";button.innerHTML
 </div>
 <div class="card c1">
 <h2>5. Psychological Issues<div class="la"><button onclick="solu(5, this)">Solution</button></div></h2>
-<p id="5">Psychological issues can completely change how the child thinks and behaves, making some people treat them differently and make them feel left out.</p>
+<p id="5">Psychological issues can completely change how the child thinks and behaves, making some people treat them differently and make them feel left out. Nearly 1 in 4 Syrian refugee children aged 8–17 in an Istanbul study showed symptoms of depression, anxiety or PTSD.</p>
 </div>
 </div>
 <div class="cardrow">
 <div class="card c1">
 <h2>6. Isolation<div class="la"><button onclick="solu(6, this)">Solution</button></div></h2>
-<p id="6">Isolation only worsens the effects of everything above. They stop sharing their thoughts and problems with family and feel like they have no one to talk to.</p>
+<p id="6">Isolation only worsens the effects of everything above. They stop sharing their thoughts and problems with family and feel like they have no one to talk to. 65% of Syrian refugee children in one Turkish study had high scores on a loneliness scale.</p>
 </div>
 <div class="card c1">
 <h2>7. Discrimination<div class="la"><button onclick="solu(7, this)">Solution</button></div></h2>
-<p id="7">Like isolation, discrimination will only worsen the issues and make it even less likely the child will make friends. It will also greatly reduce the child’s confidence and make them feel all the more isolated.</p>
+<p id="7">Like isolation, discrimination will only worsen the issues and make it even less likely the child will make friends. 44.1% of Syrian refugee adolescents reported experiencing bullying, compared with 27.8% of non-refugee adolescents. It will also greatly reduce the child’s confidence and make them feel all the more isolated.</p>
 </div>
 </div>
 <div class="card advice">
