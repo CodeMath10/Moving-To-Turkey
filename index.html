@@ -4,8 +4,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+#problems{display:flex; gap:20px;align-items:center}
 Body{background-color:#FFFFEB}
-.cardrow{display:flex;gap:20px;margin-bottom:20px}
+.cardrow{display:flex;gap:20px;margin-bottom:20px;}
 .c1{flex:1}
 .c2{flex:2}
 .c3{flex:3}
@@ -14,77 +15,125 @@ Body{background-color:#FFFFEB}
 .card{padding:15px;border-radius:20px;background-color:#3EEFFF}
 .advice{background-color:#00CBE1;}
 .la{text-align:right;display:inline}
+.tab{display:flex; gap:20px;flex-wrap:wrap;padding:15px;border-radius:20px;background-color:#0099B1}
+.tab button{flex:1;font-size:24px}
+.ss{flex-basis:100%}
+.pb{display:flex;flex:1;flex-direction:column;gap:10px}
+.pb button{font-size:15px}
+.pc{flex:3;}
 H1{color:#001B2E;font-family:"Poppins";font-size:70px;text-align:center}
 H2{color:#001B2E;font-family:"Poppins";font-size:35px;display:flex;justify-content:space-between;}
 P{color:#04052E;font-family:"Poppins";font-size:24px}
-Button{background-color:#001B2E;padding:10px;border-radius:15px;font-color:#001B2E;font-family:"Poppins";color:white;border:none}
+Button{background-color:#001B2E;padding:10px;border-radius:15px;font-color:#001B2E;font-family:"Poppins";color:white;border:none;font-size:24px}
 a{font-family:"Poppins";color:#04052E;font-size:24px}
 </style>
 <title>Migrating to Türkiye</title>
 </head>
 <body>
 <script>
-let probs=["","Child labor stops children from doing and receiving necessities such as education and proper nutrition and care. This greatly affects their quality of life and their future. 19% of boys aged 12-14 and a whopping 48% of boys aged 15-17 are forced to work. Girls, however are much lower (5 and 9%).","When children grow up being uneducated, it usually means they find it very hard to get a well-paying job, and traps them in a loop of poverty. Only 48.57% of upper-secondary-age refugee/protected children attended upper secondary school.","Not being aware of the services means if they are in a problem, even if the government can help them with ease, it may not help because the child never reached out to them.","Even if children are going to school, not being able to speak the local language will greatly affect their confidence. They also may not be able to communicate with people who help what may be going on at home.","Psychological issues can completely change how the child thinks and behaves, making some people treat them differently and make them feel left out. Nearly 1 in 4 Syrian refugee children aged 8–17 in an Istanbul study showed symptoms of depression, anxiety or PTSD.","Isolation only worsens the effects of everything above. They stop sharing their thoughts and problems with family and feel like they have no one to talk to. 65% of Syrian refugee children in one Turkish study had high scores on a loneliness scale.","Like isolation, discrimination will only worsen the issues and make it even less likely the child will make friends. 44.1% of Syrian refugee adolescents reported experiencing bullying, compared with 27.8% of non-refugee adolescents. It will also greatly reduce the child’s confidence and make them feel all the more isolated"]
-let solus=["","Despite being a huge problem for adolescent immigrants in Türkiye, a relatively simple and reliable solution is to make laws against child labor extremely strict. For example, extremely big fines, random inspections, or even losing their selling license. Implementing these stricter laws would strongly discourage businesses from using child labor due to the immense consequences.","Lack of education is a major problem, trapping new immigrants in a loop of poverty. To prevent this, education could be made a mandate for all new immigrants of ages 3-18. This would hold both the school system and parents accountable for a child not receiving education, making it much more likely every child will be educated.","A major problem with a simple solution; campaigns and posters put up in refugee areas, and simply putting up billboard posters will make migrants aware of some solutions to problems they may be facing. Adding multilingual posters will further boost its efficiency.","Not knowing the language can greatly amplify the effects of all the problems. A way to reduce its effects is to teach Turkish in schools and teach basic Turkish upon entering.","Many adolescents face psychological issues upon migrating due to trauma in their previous home. To fix this, counselors can be put in school. These counselors could be multilingual, and speak the child’s native language to avoid the language barrier. They should also be specialized in trauma training, or PTSD, to give the right help at the right time.","To avoid isolation and discrimination, migrant families could be put in areas with a diverse group of people, or more families that have migrated from their area to make them feel included, or at home.","  To avoid isolation and discrimination, migrant families could be put in areas with a diverse group of people, or more families that have migrated from their area to make them feel included, or at home."]
+let probs=["",
+"Child labor stops children from doing and receiving necessities such as education and proper nutrition and care. This greatly affects their quality of life and their future. 19% of boys aged 12-14 and a whopping 48% of boys aged 15-17 are forced to work. Girls, however are much lower (5 and 9%).",
+"Children, when not educated, can face serious problems in later life and may even get trapped in a loop of poverty. Being uneducated makes it harder to find well-paying jobs, which makes it harder for them to put their children in school, who get trapped in the same loop. Right now, only 48.57% of upper-secondary-age refugees go to school!",
+"If a child is unaware of the services they can be provided with, they may keep certain problems to themselves and may live with them for very long even if someone can help them. That is why making sure everyone is aware of the available services is very important.",
+"Not knowing the language spoken (Turkish) can have a huge effect on the mental health of migrants. Their confidence may be greatly reduced, and they may be bullied at school. They also won't be able to communicate with people that can possibly help them.",
+"Most migrants come after fleeing from war, so it is only natural that these refugees will have a high risk of developing mental health issues such as PTSD. However, this can completely change how the child thinks and behaves. Currently about 1 in every 4 Syrian refugee children aged 8–17 in an Istanbul study showed symptoms of depression, anxiety or PTSD.",
+"Isolation can be a serious problem for migrant children, especially when they have left their friends and family behind. Being in a new country where they may not know many people can make them feel lonely and left out. This can worsen other problems such as psychological issues and language barriers. In fact, 65% of Syrian refugee children in one Turkish study had high scores on a loneliness scale.",
+"Discrimination can make it much harder for migrant children to feel accepted in a new country. They may be treated differently because of their nationality, language or background, which can greatly reduce their confidence and make them feel even more isolated. In fact, 44.1% of Syrian refugee adolescents reported experiencing bullying, compared with 27.8% of non-refugee adolescents."]
+
+let solus=["",
+"Despite being a huge problem for adolescent immigrants in Türkiye, a relatively simple and reliable solution is to make laws against child labor extremely strict. For example, extremely big fines, random inspections, or even losing their selling license. Implementing these stricter laws would strongly discourage businesses from using child labor due to the immense consequences.<br><b> If you are experiencing child labor immediately contact <a href='https://sgdd.org.tr/en/contact/'>SGDD-ASAM</a>, which can help refugees access protection services and refer them to the appropriate authorities.<br> <a href='https://www.surveymonkey.com/r/MTPZKTQ'>Click here to support us</a></b>",
+"Lack of education is a major problem, trapping new immigrants in a loop of poverty. To prevent this, education could be made a mandate for all new immigrants of ages 3-18. This would hold both the school system and parents accountable for a child not receiving education, making it much more likely every child will be educated. <br><b>If you are already in school you should attend regularly, ask teachers if you're unsure and use online resources like <a href='https://www.khanacademy.org/'>Khan Academy</a>.<br> <a href='https://www.surveymonkey.com/r/MTPZKTQ'>Click here to support us</a></b>",
+"The solution is not very difficult. Posters—in multiple languages—could be put up in areas with a large number of migrants. Billboards could be put up on roads, and catchy slogans could be made. This would make migrants more aware and may even change the lives of certain refugees.<br><b> You can also visit <a href='https://turkiye.servicesadvisor.net/en'>UNHCR Türkiye Services Advisor</a> to find more services near you.<br><a href='https://www.surveymonkey.com/r/MTPZKTQ'>Click here to support us</a></b>.",
+"Because not knowing the spoken language of an area can greatly amplify the effects of all the above issues, learning Turkish would be a very important part of the whole solution. Turkish can be taught in every school, and basic Turkish can be taught upon entering.<br><b> Furthermore, migrants can learn Turkish on language learning apps like <a href='https://duolingo.com'>Duolingo</a>. <br><a href='https://www.surveymonkey.com/r/MTPZKTQ'>Click here to support us</a></b>",
+"Many adolescents face psychological issues upon migrating due to trauma in their previous home. To fix this, counselors can be put in school. These counselors could be multilingual, and speak the child’s native language to avoid the language barrier. They should also be specialized in trauma training, or PTSD, to give the right help at the right time.<br><b> If you are struggling mentally, talk to a trusted adult, school counsellor or teacher and visit <a href='https://turkiye.servicesadvisor.net/en'>UNHCR Türkiye Services Advisor</a> to find help near you.<br><a href='https://www.surveymonkey.com/r/MTPZKTQ'>Click here to support us</a></b>",
+"To reduce isolation, migrant families could be placed in diverse areas where they can meet both local people and other migrants. Schools could also organize activities and events where migrant children can interact with others and make new friends. This would help them feel more included and comfortable in their new community.<br><b> If you feel isolated or left out try joining clubs in your area and interact with as many people as you can. You can also visit a local youth centre - such as <a href='https://sgdd.org.tr/en/contact/'>SGDD-ASAM</a>- often.<br><a href='https://www.surveymonkey.com/r/MTPZKTQ'>Click here to support us</a></b>",
+"Schools could have stricter rules against discrimination and bullying and make sure that students know the consequences of treating others unfairly. Activities could also be organized where migrant and local children work and interact together. This could help them understand each other better and reduce discrimination while helping migrant children feel more included. <br><b>If you experience discrimination or bullying, report it to a teacher, trusted adult or another person who can help you.<br><a href='https://www.surveymonkey.com/r/MTPZKTQ'>Click here to support us</a></b>"]
+
 function solu(n, button){document.getElementById(n).innerHTML=solus[n];button.innerHTML="Problem";button.setAttribute("onclick",`prob(${n},this)`)}
 function prob(n, button){document.getElementById(n).innerHTML=probs[n];button.innerHTML="Solution";button.setAttribute("onclick",`solu(${n},this)`)}
 function sources(button){document.getElementById("sc").innerHTML=`<div class="card"><center><a href="https://www.unicef.org/turkiye/en/humanitarian-action-children-hac">UNICEF Türkiye Humanitarian Action</a><br><a href="https://unis.unvienna.org/unis/en/topics/refugees-migration.html">UN Refugees Migration</a><br><a href="https://www.jointdatacenter.org/literature_review/the-making-of-a-lost-generation-child-labor-among-syrian-refugees-in-turkey/">Joint Data Center on Forced Displacement</a></center></div>`;button.innerHTML="Back";button.setAttribute("onclick","bck(this)")}
 function bck(button){document.getElementById("sc").innerHTML="";button.innerHTML="Sources";button.setAttribute("onclick","sources(this)")}
+function showTab(ic){if(ic=="problems"){document.getElementById("why").style="display:none";document.getElementById("ad").style="display:none";document.getElementById("problems").style="display:flex";document.getElementById("p0").style.display="none";document.getElementById("p1").style.display="none";document.getElementById("p2").style.display="none";document.getElementById("p3").style.display="none";document.getElementById("p4").style.display="none";document.getElementById("p5").style.display="none";document.getElementById("p6").style.display="none";document.getElementById("p7").style.display="none";document.getElementById("p0").style.display="block";}else{document.getElementById("problems").style="display:none";document.getElementById("why").style="display:none";document.getElementById("ad").style="display:none";document.getElementById(ic).style="display:block";}}
+function probTab(j){document.getElementById("p0").style.display="none";document.getElementById("p1").style.display="none";document.getElementById("p2").style.display="none";document.getElementById("p3").style.display="none";document.getElementById("p4").style.display="none";document.getElementById("p5").style.display="none";document.getElementById("p6").style.display="none";document.getElementById("p7").style.display="none";document.getElementById(j).style.display="block";}
 </script>
 <h1>Moving to Türkiye</h1>
-<div class="card">
+<div class="tab"> 
+<button onclick="showTab('why')">Why do people move to Türkiye?</button>
+<button onclick="showTab('problems')">Problems & Possible Solutions</button>
+<button onclick="showTab('ad')">Advice</button><br>
+<div class="ss">
+<center>
+<button style="font-size:18px;text-align:center" onclick="sources(this)">Sources</button>
+<p id="sc"></p>
+</center>
+</div>
+</div><br>
+
+<div class="card" id="why" style="display:block">
 <h2>Why do people move to Türkiye?</h2>
-<p>Many people move to Türkiye (formerly known as Turkey). In fact, there are roughly 3.6 million refugees living in Türkiye today. Around 2.3 million of these individuals have come to seek safety from the civil war in Syria. Other people leave their home countries to escape strict laws or political instability. They choose to move to Türkiye due to its geographical location, paths to legal residency, and the opportunities for freedom and safety it offers.</p>
+<p>There are roughly 3.6 million refugees living in Türkiye today. Around 2.3 million of these individuals have come to seek safety from the civil war in Syria, which has forced millions of people to leave their homes. Other people may leave their home countries to escape strict laws, conflict or political instability that can make everyday life difficult or unsafe. Türkiye is a common destination because of its geographical location between Europe, Asia and the Middle East, making it relatively accessible from several neighbouring countries. People may also choose Türkiye because of its paths to legal residency and the opportunities for greater freedom, security and safety it can offer. For many refugees and migrants, moving to Türkiye can therefore provide the chance to escape dangerous conditions and begin building a safer and more stable life.
+</p>
 </div>
 <br>
-<div class="cardrow">
-<div class="card c1">
-<br>
-<p>Moving to a new country can bring many opportunities, but it can also create serious challenges, especially for young people. Migrant children in Türkiye may face problems involving education, language, child labour, discrimination and mental health. This website explores some of the most serious problems they may face (in order of seriousness), possible solutions, and advice for young migrants.</p>
+
+<div id="problems" style="display:none">
+<div class="pb" id="pl">
+<button onclick='probTab("p0")'>Introduction</button>
+<button onclick='probTab("p1")'>Child Labor</button>
+<button onclick='probTab("p2")'>Education</button>
+<button onclick='probTab("p3")'>Services</button>
+<button onclick='probTab("p4")'>Language</button>
+<button onclick='probTab("p5")'>Psychological</button>
+<button onclick='probTab("p6")'>Isolation</button>
+<button onclick='probTab("p7")'>Discrimination</button>
 </div>
-<div class="card c1">
+<div class="pc">
+<div class="card c1" id="p0">
+<br>
+<p>Moving to a new country can bring many new opportunities and experiences, but it can also create serious challenges, especially for young people. Migrant children in Türkiye may have to adjust to a completely new environment while facing problems involving education, language barriers, child labour, discrimination, isolation and mental health. Some children may also be unaware of the services available to help them, making these problems even more difficult to overcome. These challenges can affect not only their everyday lives, but also their education, confidence and future. This website explores some of the most serious problems migrant children may face in Türkiye, in order of seriousness, along with possible solutions and practical advice that could help young migrants deal with these challenges.</p>
+</div>
+
+<div class="card c1" id="p1">
 <h2>1. Child Labor <div class="la"><button onclick="solu(1, this)">Solution</button></div></h2>
 <p id="1">Child labor stops children from doing and receiving necessities such as education and proper nutrition and care. This greatly affects their quality of life and their future. 19% of boys aged 12-14 and a whopping 48% of boys aged 15-17 are forced to work. Girls, however are much lower (5 and 9%).</p>
 </div>
-</div>
-<div class="cardrow">
-<div class="card c1">
+
+<div class="card c1" id="p2">
 <h2>2. Lack of education <div class="la"><button onclick="solu(2, this)">Solution</button></div></h2>
-<p id="2">When children grow up being uneducated, it usually means they find it very hard to get a well-paying job, and traps them in a loop of poverty. Only 48.57% of upper-secondary-age refugee/protected children attended upper secondary school.</p>
+<p id="2">Children, when not educated, can face serious problems in later life and may even get trapped in a loop of poverty. Being uneducated makes it harder to find well-paying jobs, which makes it harder for them to put their children in school, who get trapped in the same loop. Right now, only 48.57% of upper-secondary-age refugees go to school!</p>
 </div>
-<div class="card c1">
+
+<div class="card c1" id="p3">
 <h2>3. Unawareness of available services <div class="la"><button onclick="solu(3, this)">Solution</button></div></h2>
-<p id="3">Not being aware of the services means if they are in a problem, even if the government can help them with ease, it may not help because the child never reached out to them</p>
+<p id="3">If a child is unaware of the services they can be provided with, they may keep certain problems to themselves and may live with them for very long even if someone can help them. That is why making sure everyone is aware of the available services is very important.</p>
 </div>
-</div>
-<div class="cardrow">
-<div class="card c1">
+
+<div class="card c1" id="p4">
 <h2>4. Language barrier<div class="la"><button onclick="solu(4, this)">Solution</button></div></h2>
-<p id="4">Even if children are going to school, not being able to speak the local language will greatly affect their confidence. They also may not be able to communicate with people who help what may be going on at home.</p>
+<p id="4">Not knowing the language spoken (Turkish) can have a huge effect on the mental health of migrants. Their confidence may be greatly reduced, and they may be bullied at school. They also won't be able to communicate with people that can possibly help them.</p>
 </div>
-<div class="card c1">
+
+<div class="card c1" id="p5">
 <h2>5. Psychological Issues<div class="la"><button onclick="solu(5, this)">Solution</button></div></h2>
-<p id="5">Psychological issues can completely change how the child thinks and behaves, making some people treat them differently and make them feel left out. Nearly 1 in 4 Syrian refugee children aged 8–17 in an Istanbul study showed symptoms of depression, anxiety or PTSD.</p>
+<p id="5">Most migrants come after fleeing from war, so it is only natural that these refugees will have a high risk of developing mental health issues such as PTSD. However, this can completely change how the child thinks and behaves. Currently about 1 in every 4 Syrian refugee children aged 8–17 in an Istanbul study showed symptoms of depression, anxiety or PTSD.</p>
 </div>
-</div>
-<div class="cardrow">
-<div class="card c1">
+
+<div class="card c1" id="p6">
 <h2>6. Isolation<div class="la"><button onclick="solu(6, this)">Solution</button></div></h2>
-<p id="6">Isolation only worsens the effects of everything above. They stop sharing their thoughts and problems with family and feel like they have no one to talk to. 65% of Syrian refugee children in one Turkish study had high scores on a loneliness scale.</p>
+<p id="6">Isolation can be a serious problem for migrant children, especially when they have left their friends and family behind. Being in a new country where they may not know many people can make them feel lonely and left out. This can worsen other problems such as psychological issues and language barriers. In fact, 65% of Syrian refugee children in one Turkish study had high scores on a loneliness scale.</p>
 </div>
-<div class="card c1">
+
+<div class="card c1" id="p7">
 <h2>7. Discrimination<div class="la"><button onclick="solu(7, this)">Solution</button></div></h2>
-<p id="7">Like isolation, discrimination will only worsen the issues and make it even less likely the child will make friends. 44.1% of Syrian refugee adolescents reported experiencing bullying, compared with 27.8% of non-refugee adolescents. It will also greatly reduce the child’s confidence and make them feel all the more isolated.</p>
+<p id="7">Discrimination can make it much harder for migrant children to feel accepted in a new country. They may be treated differently because of their nationality, language or background, which can greatly reduce their confidence and make them feel even more isolated. In fact, 44.1% of Syrian refugee adolescents reported experiencing bullying, compared with 27.8% of non-refugee adolescents..</p>
 </div>
 </div>
-<div class="card advice">
+</div>
+
+<div class="card advice" id="ad" style="display:none">
 <h2>Advice for young migrants</h2>
 <p>Moving to a new country can be difficult, but you don't have to face every problem alone. Try to learn basic Turkish so it is easier to communicate at school and in everyday life. Find out what services are available to you and ask a trusted adult, teacher or school for help if you don't know where to start. If you are struggling emotionally, talk to someone you trust instead of keeping it to yourself. Try to stay connected with friends and family and meet new people to avoid feeling isolated. Most importantly, speak up if you are being treated unfairly or feel unsafe.</p>
 </div> 
-<br>
-<center>
-<button style="width:90%;font-size:24px;text-align:center" onclick="sources(this)">Sources</button>
-<p id="sc"></p>
-</center>
+
 </body>
 </html>
